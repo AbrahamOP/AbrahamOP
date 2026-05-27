@@ -2,7 +2,7 @@
 
 Cybersecurity engineer focused on **SecOps**, **infrastructure security**, and **offensive security tooling**.
 
-Currently working as a **Security Operations Analyst** at [Valiuz](https://www.valiuz.com/) (GCP, Zero Trust, CrowdStrike, Wiz, Zscaler) while completing my **M2 in Cybersecurity** at EPSI.
+Currently completing my **M2 in Cybersecurity** at EPSI while working in **Security Operations** (GCP, Zero Trust, EDR, CSPM).
 
 ### What I build
 
@@ -15,7 +15,7 @@ Currently working as a **Security Operations Analyst** at [Valiuz](https://www.v
 
 ### Homelab
 
-I run a segmented Proxmox homelab with OPNsense, Wazuh SIEM, Suricata IDS, Traefik reverse proxy, and Cloudflare Zero Trust — all infrastructure-as-code, monitored, and documented.
+I run a segmented Proxmox homelab with OPNsense, Wazuh SIEM, Suricata IDS, Traefik reverse proxy, and Cloudflare Zero Trust — all monitored and documented.
 
 ### Tech stack
 
