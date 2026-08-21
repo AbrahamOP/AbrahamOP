@@ -1,97 +1,217 @@
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1D9E75,100:534AB7&height=190&section=header&text=Antoine%20P.&fontSize=52&fontColor=ffffff&desc=GoaCloud%20%E2%80%94%20entreprise%20cr%C3%A9%C3%A9e%20en%20octobre%202026&descSize=19&descAlignY=79" alt="Antoine P. — ingénieur cybersécurité, fondateur de GoaCloud" width="100%" />
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&pause=1200&color=1D9E75&center=true&vCenter=true&width=640&lines=Des+outils+d'infra+que+vous+h%C3%A9bergez+vous-m%C3%AAme;S%C3%A9curit%C3%A9+op%C3%A9rationnelle+%E2%80%A2+d%C3%A9tection+%26+r%C3%A9ponse;Go+%E2%80%A2+Python+%E2%80%A2+Bash+%E2%80%A2+z%C3%A9ro+t%C3%A9l%C3%A9m%C3%A9trie" alt="" />
-
-</div>
-
-<br>
-
-Ingénieur cybersécurité, je fonde **[GoaCloud](https://goacloud.fr)** — un studio d'outils souverains
-pour les PME : de l'infrastructure et de la sécurité que l'on héberge chez soi, sans télémétrie et
-sans dépendance à un cloud tiers.
-
-Ce que je publie sort de besoins réels, éprouvé sur une infrastructure segmentée avant d'être livré.
-
-<br>
-
-## 🚀 GoaCore — le produit
-
-**[GoaCore](https://github.com/GoaCloud/GoaCore)** est une console unifiée pour administrer une
-infrastructure Proxmox : inventaire des machines, supervision, SIEM et réponse assistée par IA, et
-des **sauvegardes vérifiées par restauration réelle** — pas seulement par la présence d'un fichier.
-
-<div align="center">
-
-[![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/GoaCloud/GoaCore)
-[![AGPL-3.0](https://img.shields.io/github/license/GoaCloud/GoaCore?style=flat-square&color=1D9E75)](https://github.com/GoaCloud/GoaCore/blob/main/LICENSE)
-[![Stars](https://img.shields.io/github/stars/GoaCloud/GoaCore?style=flat-square&color=534AB7)](https://github.com/GoaCloud/GoaCore)
-[![Dernier commit](https://img.shields.io/github/last-commit/GoaCloud/GoaCore?style=flat-square&color=1D9E75)](https://github.com/GoaCloud/GoaCore/commits)
-
-</div>
-
-<br>
-
-## 🧰 Autres projets publics
-
-| Projet | Ce que ça fait |
-|---|---|
-| **[claude-security-agents](https://github.com/AbrahamOP/claude-security-agents)** | 48 agents Claude Code spécialisés en cybersécurité — blue, red et purple team, DevSecOps, GRC, réponse à incident. |
-| **[redteam-toolkit](https://github.com/AbrahamOP/redteam-toolkit)** | 90+ scripts, cheatsheets et modèles de rapport pour du test d'intrusion autorisé. |
-| **[GoaBlockAD](https://github.com/AbrahamOP/GoaBlockAD)** | Bloqueur de publicités pour Chrome, publié sur le Web Store. Manifest V3, filtrage 100 % local, zéro télémétrie. |
-| **[GoaScan](https://github.com/AbrahamOP/GoaScan)** | Scanner de vulnérabilités pour images Docker et systèmes de fichiers. |
-
-<br>
-
-## 🛠️ Compétences
-
-<div align="center">
-
-**Sécurité & détection**
-
-![Wazuh](https://img.shields.io/badge/Wazuh-3B66BC?style=flat-square)
-![Suricata](https://img.shields.io/badge/Suricata-EE3424?style=flat-square)
-![MITRE ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-C8102E?style=flat-square)
-![CrowdStrike](https://img.shields.io/badge/CrowdStrike-E01F3D?style=flat-square)
-![Wiz](https://img.shields.io/badge/Wiz-00CFFF?style=flat-square)
-![Zscaler](https://img.shields.io/badge/Zscaler-0067B5?style=flat-square)
-
-**Cloud & infrastructure**
-
-![GCP](https://img.shields.io/badge/Google%20Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
-![BigQuery](https://img.shields.io/badge/BigQuery-669DF6?style=flat-square&logo=googlebigquery&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
-![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=flat-square&logo=proxmox&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Traefik](https://img.shields.io/badge/Traefik-24A1C1?style=flat-square&logo=traefikproxy&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-
-**Langages**
-
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
-![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
-
-</div>
-
-<br>
-
 <!--
-  Widget de statistiques volontairement absent.
-  github-readme-stats.vercel.app répondait 503 pour tous les comptes le
-  2026-08-13 (panne du service, pas du profil) : une image cassée en haut d'un
-  profil coûte plus qu'elle ne rapporte. À réactiver s'il redevient fiable :
+  Profil GitHub — AbrahamOP
+  Règles de ce fichier, à ne pas défaire par distraction :
 
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=AbrahamOP&show_icons=true&hide_border=true&theme=tokyonight&count_private=true&include_all_commits=true&hide=stars&title_color=1D9E75&icon_color=534AB7&bg_color=00000000" alt="Statistiques GitHub" />
+  1. Aucun widget tiers. Ce qui s'affiche est soit un fichier de ce dépôt
+     (assets/*.svg, régénérés par `python3 tools/gen_svg.py`), soit une donnée
+     GitHub officielle servie par img.shields.io sur mes propres dépôts. Pas de
+     compteur de visites, pas de « now playing », pas de trophées : la marque
+     promet zéro télémétrie, le profil tient la même ligne.
+
+  2. Badges : uniquement des valeurs neutres linguistiquement. Vérifié le
+     2026-08-21 — `commit-activity/m` rend « activité: 18/month » (anglais sur
+     une page française, et « 0/month » au premier mois calme) et
+     `languages/top` rend « langage: 62.1 % », le nom du langage disparaissant
+     dès qu'on personnalise `label=`. Les deux sont écartés, ne pas les remettre.
+
+  3. Les SVG ne déclarent aucune police de marque (JetBrains Mono, Fraunces,
+     Inter) : affichés par GitHub dans une balise <img>, donc en contexte isolé,
+     ils ne pourraient pas la charger — une police déclarée jamais servie ne
+     change rien au rendu et ment sur le fichier. Piles système uniquement.
+     `python3 tools/check_contrast.py` garde les contrastes des deux palettes.
+
+  4. Les blocs de code sont rendus à l'identique en thème clair et en thème
+     sombre : c'est l'élément le plus robuste de la page, ne pas les remplacer
+     par du HTML. Repli tout-ASCII si un caractère passe mal :
+     ─ → -   │ ├ └ → | + \   ▼ → v   · → -   ≥ → >=   ─ (séparateur) → -
 -->
 
 <div align="center">
 
-### 🌐 [goacloud.fr](https://goacloud.fr)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/terminal-dark.svg">
+  <img src="assets/terminal-light.svg" width="780" alt="Terminal antoine@goacloud. $ whoami : Antoine P., ingénieur cybersécurité, sécurité opérationnelle. $ cat /etc/motd : des outils d'infrastructure que vous hébergez vous-même, zéro télémétrie, code auditable, vos données restent chez vous.">
+</picture>
 
-<sub>Des outils que vous hébergez. Vos données restent chez vous.</sub>
+**Antoine P.** — ingénieur cybersécurité, sécurité opérationnelle<br>
+détection et réponse · durcissement d'infrastructure · sécurité cloud
+
+<sub>Trois commandes de cette page n'existent pas : <code>goafetch</code>, <code>goalert</code> et <code>goanet</code> sont une mise en scène.<br>Les sorties, elles, décrivent une infrastructure qui tourne.</sub>
+
+</div>
+
+<br>
+
+Je conçois et j'opère la détection : instrumenter les hôtes, écrire les règles, faire baisser le
+bruit, puis instruire les alertes jusqu'au post-mortem. Le reste du temps je durcis ce qui doit
+l'être — réseau, identités, cloud — et j'écris les outils qui manquent, sous
+**[GoaCloud](https://goacloud.fr)** : de l'infrastructure et de la sécurité que l'on héberge chez
+soi, en open source, sans télémétrie.
+
+<br>
+
+## `goafetch` — qui je suis
+
+```
+  _____     antoine@goacloud
+ /     \    ──────────────────────────────────────────────────────────
+| o   o |   Poste ...... ingénieur cybersécurité
+|  \_/  |   Détecter ... Wazuh, règles maison, Suricata, MITRE ATT&CK
+\_/\_/\_/   Répondre ... confiner, éradiquer, écrire le post-mortem
+            Durcir ..... segmentation, moindre privilège, SSO OIDC, TLS
+            Cloud ...... GCP : IAM, journalisation, posture, Zero Trust
+            Écrire ..... Go · Python · Bash · Swift
+            Projet ..... GoaCore — console unifiée pour Proxmox
+            Licence .... AGPL-3.0, auto-hébergeable, code auditable
+            Terrain .... Proxmox segmenté en VLAN, OPNsense + Suricata
+```
+
+<br>
+
+## `goalert trace --last` — le chemin d'une alerte
+
+Le plus intéressant n'est pas la détection, c'est ce qui se passe dans les minutes qui suivent.
+
+```
+un flux inter-VLAN qui n'a rien à faire là
+  │
+  ▼
+Suricata, en coupure ........ signature levée, écrite dans eve.json
+  │
+  ▼
+Wazuh ....................... décodage, corrélation, règles maison
+                              rattachement à MITRE ATT&CK
+  │  niveau ≥ 10 : ça sort du bruit de fond
+  ▼
+GoaCore · SOAR .............. contexte machine, résumé, action proposée
+  │
+  ├─ blocage à la source .... l'alias OPNsense, mis à jour par l'API
+  └─ fiche d'alerte ......... la décision, elle, reste humaine
+```
+
+Entre l'IDS et la fiche d'alerte, l'essentiel du travail est du débruitage : sans règles de
+corrélation écrites à la main, un IDS ne produit pas de la détection, il produit du volume. Le
+dernier maillon est celui que j'écris — le SOAR rassemble le contexte, il ne décide pas.
+
+<br>
+
+## `goanet topo` — le banc d'essai
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/segmentation-dark.svg">
+  <img src="assets/segmentation-light.svg" width="100%" alt="Schéma de la segmentation du banc d'essai : Internet et l'accès distant Cloudflare Zero Trust convergent vers un pare-feu OPNsense avec Suricata en coupure, qui dessert six VLAN isolés — DMZ, services, sécurité, management, formation et laboratoire cloisonné — puis des sauvegardes chiffrées, sorties hors site et rejouées dans un bac à sable réseau isolé.">
+</picture>
+
+<details>
+<summary><b>Le même plan, en texte</b></summary>
+
+```
+   Internet (WAN)              Cloudflare Zero Trust
+         │                              │
+         └──────────────┬───────────────┘
+                        ▼
+  ┌────────────────────────────────────────────────────────────┐
+  │  OPNsense · blocage par défaut · Suricata en coupure       │
+  └───────────────────────┬────────────────────────────────────┘
+                          │
+  ┌───────────────────────┘
+  │
+  ├─ VLAN 10  DMZ ............ exposé, sans retour vers le LAN
+  ├─ VLAN 20  Services ....... Traefik en TLS wildcard, Docker, GoaCore
+  ├─ VLAN 30  Sécurité ....... SIEM Wazuh, outils offensifs
+  ├─ VLAN 40  Management ..... hyperviseur Proxmox, sauvegardes
+  ├─ VLAN 50  Formation ...... machines montées puis détruites
+  ├─ VLAN 60  Laboratoire .... test cloisonné, sans route sortante
+  │
+  └─ sauvegardes ............. chiffrées, hors site, rejouées
+                               pour de vrai, en bac à sable jetable
+```
+
+</details>
+
+Ce n'est pas une maquette : c'est un homelab Proxmox réellement segmenté, sur lequel tourne tout
+ce que je publie. Les mauvaises surprises se paient ici, pas chez les gens qui installent l'outil.
+Trois choses qu'il m'a apprises :
+
+- Une sauvegarde qu'on n'a jamais restaurée n'est pas une sauvegarde, c'est un fichier.
+- La segmentation ne coûte presque rien le jour où on la pose, et très cher le jour où on veut l'ajouter.
+- Un outil qui appelle discrètement l'extérieur finit toujours par le faire au mauvais moment.
+
+<br>
+
+## `systemctl status goacore` — ce que je construis
+
+```
+● goacore.service - console unifiée pour une infrastructure Proxmox
+     Loaded: loaded (GoaCloud/GoaCore; enabled; licence AGPL-3.0)
+     Active: active (running) — sur le banc d'essai décrit plus haut
+     Status: "aucun appel sortant, aucun plan de contrôle distant"
+       Docs: https://goacloud.fr
+     CGroup: /goacloud.slice/goacore.service
+             ├─ inventaire et console des machines
+             ├─ SIEM/SOAR Wazuh : tri, enrichissement, action proposée
+             ├─ automatisation Ansible sur le parc
+             └─ sauvegardes rejouées pour de vrai, reprise chronométrée
+```
+
+En service chez moi, en chantier pour vous : **[GoaCore](https://github.com/GoaCloud/GoaCore)**
+administre l'infrastructure décrite plus haut, et son interface comme ses formats bougent encore
+— c'est écrit avant, pas après. Sa partie la moins spectaculaire est celle à laquelle je tiens le
+plus : une sauvegarde n'y est pas déclarée bonne parce qu'un fichier existe, elle est restaurée
+dans un bac à sable jetable et coupé du réseau, et le temps de reprise est mesuré.
+
+[![version](https://img.shields.io/github/v/release/GoaCloud/GoaCore?style=flat-square&label=version&color=1D9E75&labelColor=0a1411)](https://github.com/GoaCloud/GoaCore/releases)
+[![licence](https://img.shields.io/github/license/GoaCloud/GoaCore?style=flat-square&label=licence&color=1D9E75&labelColor=0a1411)](https://github.com/GoaCloud/GoaCore/blob/main/LICENSE)
+[![go](https://img.shields.io/github/go-mod/go-version/GoaCloud/GoaCore?style=flat-square&label=go&color=534AB7&labelColor=0a1411)](https://github.com/GoaCloud/GoaCore/blob/main/go.mod)
+
+<br>
+
+## `gh repo list --no-archived` — ce que je publie
+
+| Dépôt | Le problème qu'il règle | État |
+|:--|:--|:--|
+| **[GoaCore](https://github.com/GoaCloud/GoaCore)** | Administrer un Proxmox, c'est huit onglets ouverts — hyperviseur, SIEM, sauvegardes, automatisation — et personne, le matin, pour dire si l'ensemble tient encore debout. | en service, en chantier |
+| **[GoaBlockAD](https://github.com/AbrahamOP/GoaBlockAD)** | Un bloqueur de publicités voit exactement ce que vous voyez, et beaucoup en profitent. Celui-ci filtre en local, sans requête sortante. [Sur le Chrome Web Store](https://chromewebstore.google.com/detail/goablockad/iacipenfiandimlkkcmgafefcjcclhhl). | publié |
+| **[claude-security-agents](https://github.com/AbrahamOP/claude-security-agents)** | Les méthodes de sécurité vivent dans des têtes et des documents, jamais dans l'outillage quotidien. 48 agents : blue, red, purple, DevSecOps, GRC, réponse à incident. | publié |
+| **[redteam-toolkit](https://github.com/AbrahamOP/redteam-toolkit)** | Sur un test d'intrusion autorisé, une part absurde du temps passe à réécrire les commandes du test précédent. 90+ scripts, aide-mémoires et modèles de rapport. | publié |
+| **[MenuMixer](https://github.com/AbrahamOP/MenuMixer)** | macOS règle le volume du système, jamais celui d'une application en particulier. Un mélangeur audio par application, en Swift, dans la barre de menus. | publié |
+
+<sub><b>En service</b> : tourne en continu sur mon infrastructure. — <b>Publié</b> : installable aujourd'hui par quelqu'un d'autre que moi. — <b>En chantier</b> : l'usage tient, les formats et l'interface bougent encore.</sub>
+
+Le seul filtre que j'applique : **publier ce qui s'installe ailleurs que chez moi**. Une partie de
+ce qui tourne ici — sauvegarde vérifiée, gestion de fichiers, ordonnanceur de scripts, assistant
+auto-hébergé — n'est pas encore installable par quelqu'un qui n'a ni mon réseau ni mon DNS, donc
+n'est pas publiée. Et un dépôt que je ne maintiens plus est archivé, et il le dit : d'où le
+`--no-archived`.
+
+<br>
+
+## `cat ~/.bash_logout` — ce que cette page n'a pas fait
+
+```
+# rien à nettoyer en sortant : cette page n'a rien enregistré.
+# aucun compteur de visites, aucun traqueur, aucun profilage.
+# c'est la règle des outils, elle vaut aussi pour le README.
+
+$ exit
+déconnexion — mais la session, elle, continue :
+```
+
+<div align="center">
+
+<img src="assets/specter.svg" width="60" alt="Specter, la mascotte de GoaCloud">
+
+**[goacloud.fr](https://goacloud.fr)** ·
+[Les dépôts GoaCloud](https://github.com/GoaCloud) ·
+[Discord](https://discord.gg/pSW7kxJSjf)
+
+<sub>Un bug, une idée, une envie d'aider : une issue sur le dépôt concerné, ou le Discord.<br>
+Une faille à signaler : les <i>Security Advisories</i> privés du dépôt, jamais une issue publique.</sub>
+
+<br>
+
+<sub><i>Aucun widget tiers sur cette page. Les visuels sont des fichiers de ce dépôt, régénérables
+par <code>tools/gen_svg.py</code> ; les trois seules images distantes sont des badges qui lisent
+l'API publique de GitHub sur mes propres dépôts. Il aurait été gênant de promettre le contraire.</i></sub>
 
 </div>

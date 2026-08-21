@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 288" width="780" height="288" role="img" aria-labelledby="tt td">
+<title id="tt">antoine@goacloud — session de terminal</title>
+<desc id="td">Antoine P., ingénieur cybersécurité, sécurité opérationnelle. Des outils d'infrastructure que vous hébergez vous-même : zéro télémétrie, code auditable, vos données restent chez vous.</desc>
+<rect x="0.75" y="0.75" width="778.5" height="286.5" rx="12" fill="#0a1411" stroke="#1d3d34" stroke-width="1.5"/>
+<path d="M0.75 12.75 A12 12 0 0 1 12.75 0.75 L767.25 0.75 A12 12 0 0 1 779.25 12.75 L779.25 38 L0.75 38 Z" fill="#11241d"/>
+<path d="M0.75 38 L779.25 38" stroke="#1d3d34" stroke-width="1.5"/>
+<circle cx="23" cy="19.5" r="4.8" fill="#27c08f"/>
+<circle cx="42" cy="19.5" r="4.8" fill="#1d3d34"/>
+<circle cx="61" cy="19.5" r="4.8" fill="#1d3d34"/>
+<text x="390.0" y="24" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12.5" font-weight="500" fill="#8aa79e" text-anchor="middle" letter-spacing="0.6">antoine@goacloud : ~</text>
+<text x="30" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15.5" font-weight="500"><tspan fill="#27c08f">$</tspan> <tspan fill="#8aa79e">whoami</tspan></text>
+<text x="30" y="119" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="35" font-weight="700" fill="#dceae5" letter-spacing="-0.8">Antoine P.</text>
+<text x="30" y="147" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="16" font-weight="600" fill="#27c08f">ingénieur cybersécurité · sécurité opérationnelle</text>
+<text x="30" y="187" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15.5" font-weight="500"><tspan fill="#27c08f">$</tspan> <tspan fill="#8aa79e">cat /etc/motd</tspan></text>
+<text x="30" y="212" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15.5" font-weight="400" fill="#dceae5">Des outils d'infrastructure que vous hébergez vous-même.</text>
+<text x="30" y="234" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15.5" font-weight="400" fill="#dceae5">Zéro télémétrie, code auditable, vos données restent chez vous.</text>
+<text x="30" y="272" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15.5" font-weight="500" fill="#27c08f">$</text>
+<rect x="46" y="260" width="9" height="15" rx="1" fill="#27c08f"><animate attributeName="opacity" values="1;1;0;0" dur="1.15s" repeatCount="indefinite"/></rect>
+<g transform="translate(628 84)"><circle cx="60" cy="60" r="47" fill="none" stroke="#8a80ee" stroke-width="6.5"/><path d="M27 88 A17 17 0 0 1 30 53.5 A24 24 0 0 1 75 46 A15.5 15.5 0 0 1 93 88 Z" fill="#27c08f"/><path d="M27 88 A17 17 0 0 1 30 53.5 A24 24 0 0 1 75 46 A15.5 15.5 0 0 1 93 88 Z" fill="none" stroke="#0a1411" stroke-width="3"/></g>
+</svg>
