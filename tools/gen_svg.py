@@ -126,120 +126,7 @@ def ring_cloud(x, y, p):
 
 
 # ===========================================================================
-#  2. Schéma : la segmentation du banc d'essai
-# ===========================================================================
-
-ROWS = [
-    ("VLAN 10", "", "DMZ",
-     "ce qui est joignable depuis l'extérieur, et rien d'autre", "exposé", "violet"),
-    ("VLAN 20", "", "Services",
-     "Traefik en TLS wildcard, Docker, GoaCore, applications", "cœur applicatif", "accent"),
-    ("VLAN 30", "", "Sécurité",
-     "SIEM Wazuh, collecte des journaux, outils offensifs", "observation", "violet"),
-    ("VLAN 40", "", "Management",
-     "hyperviseur Proxmox, sauvegardes, administration", "accès restreint", "accent"),
-    ("VLAN 50", "", "Formation",
-     "travaux pratiques, machines montées puis détruites", "éphémère", "accent"),
-    ("VLAN 60", "", "Laboratoire",
-     "environnement de test cloisonné, sans route sortante", "cloisonné", "violet"),
-]
-
-
-def arrow_down(x, y0, y1, color):
-    return ('<path d="M%s %s L%s %s" stroke="%s" stroke-width="1.4" fill="none"/>'
-            '<path d="M%s %s L%s %s L%s %s Z" fill="%s"/>'
-            % (x, y0, x, y1 - 7, color, x - 4.5, y1 - 7.5, x + 4.5, y1 - 7.5, x, y1, color))
-
-
-def arrow_right(x0, x1, y, color, dash=None):
-    d = ' stroke-dasharray="%s"' % dash if dash else ""
-    return ('<path d="M%s %s L%s %s" stroke="%s" stroke-width="1.4" fill="none"%s/>'
-            '<path d="M%s %s L%s %s L%s %s Z" fill="%s"/>'
-            % (x0, y, x1 - 7, y, color, d, x1 - 7.5, y - 4.5, x1 - 7.5, y + 4.5, x1, y, color))
-
-
-def build_segmentation(theme):
-    p = PALETTES[theme]
-    o = []
-    W, H = 960, 702
-    o.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" '
-             'height="%d" role="img" aria-labelledby="t d">' % (W, H, W, H))
-    o.append("<title id=\"t\">Segmentation du banc d'essai</title>")
-    o.append('<desc id="d">Internet et l\'accès distant Zero Trust convergent vers un pare-feu '
-             'OPNsense avec Suricata en coupure, qui dessert six VLAN isolés : DMZ, services, '
-             'sécurité, management, formation et laboratoire cloisonné. Les sauvegardes sont '
-             'chiffrées, sorties hors site et rejouées dans un bac à sable réseau isolé.</desc>')
-    o.append('<rect x="0" y="0" width="%d" height="%d" rx="14" fill="%s"/>' % (W, H, p["bg"]))
-    o.append('<rect x="0.6" y="0.6" width="%s" height="%s" rx="14" fill="none" stroke="%s" '
-             'stroke-width="1.2"/>' % (W - 1.2, H - 1.2, p["line"]))
-
-    o.append(text(28, 33, "BANC D'ESSAI", 12.5, "accent", "700", MONO, ls="2.4", p=p))
-    o.append(text(932, 33, "six segments  ·  un seul point de passage  ·  rien ne traverse par défaut",
-                  11, "muted", "400", SANS, anchor="end", p=p))
-    o.append('<path d="M24 50 L936 50" stroke="%s" stroke-width="1"/>' % p["line"])
-
-    for x, t1, t2 in ((196, "Internet (WAN)", "aucun port entrant ouvert"),
-                      (512, "Cloudflare Zero Trust", "tunnel sortant, accès nominatif")):
-        o.append('<rect x="%s" y="68" width="252" height="44" rx="8" fill="%s" stroke="%s" '
-                 'stroke-width="1"/>' % (x, p["panel"], p["line"]))
-        o.append(text(x + 16, 87, t1, 12.5, "text", "600", SANS, p=p))
-        o.append(text(x + 16, 103, t2, 10.2, "muted", "400", SANS, p=p))
-        o.append(arrow_down(x + 126, 112, 136, p["muted"]))
-
-    o.append('<rect x="24" y="136" width="912" height="58" rx="9" fill="%s" stroke="%s" '
-             'stroke-width="1.6"/>' % (p["panel2"], p["accent"]))
-    o.append(text(46, 163, "OPNsense — blocage par défaut", 14.5, "text", "700", SANS, p=p))
-    o.append(text(46, 182, "Suricata IDS/IPS en coupure  ·  Unbound en DNS split-horizon  ·  "
-                           "toute ouverture est écrite et journalisée", 10.8, "muted", "400", SANS, p=p))
-    o.append('<rect x="744" y="151" width="172" height="26" rx="13" fill="none" stroke="%s" '
-             'stroke-width="1"/>' % p["accent"])
-    o.append(text(830, 168, "point de passage unique", 10.2, "accent", "600", SANS,
-                  anchor="middle", p=p))
-
-    o.append('<path d="M480 194 L480 212 L56 212 L56 558" stroke="%s" stroke-width="1.6" '
-             'fill="none" stroke-linejoin="round"/>' % p["line"])
-
-    for i, (vlan, cidr, name, desc, tag, tone) in enumerate(ROWS):
-        top = 232 + i * 60
-        cy = top + 26
-        col = p[tone]
-        o.append('<circle cx="56" cy="%s" r="2.8" fill="%s"/>' % (cy, col))
-        o.append('<path d="M56 %s L88 %s" stroke="%s" stroke-width="1.4"/>' % (cy, cy, p["line"]))
-        o.append('<rect x="88" y="%s" width="848" height="52" rx="8" fill="%s" stroke="%s" '
-                 'stroke-width="1"/>' % (top, p["panel"], p["line"]))
-        o.append('<path d="M91.5 %s L91.5 %s" stroke="%s" stroke-width="3.5" '
-                 'stroke-linecap="round"/>' % (top + 6, top + 46, col))
-        o.append(text(108, top + 21 if cidr else top + 31, vlan, 12.5, tone, "700", MONO, p=p))
-        if cidr:
-            o.append(text(108, top + 38, cidr, 10.2, "muted", "400", MONO, p=p))
-        o.append(text(232, top + 21, name, 13, "text", "600", SANS, p=p))
-        o.append(text(232, top + 38, desc, 11.2, "muted", "400", SANS, p=p))
-        o.append(text(920, top + 31, tag, 10.6, "muted", "500", SANS, anchor="end", ls="0.4", p=p))
-
-    o.append('<path d="M56 558 L56 623" stroke="%s" stroke-width="1.4" stroke-dasharray="3 4" '
-             'fill="none"/>' % p["line"])
-    o.append(arrow_right(56, 88, 623, p["line"], dash="3 4"))
-    o.append('<rect x="88" y="597" width="848" height="52" rx="8" fill="none" stroke="%s" '
-             'stroke-width="1" stroke-dasharray="4 4"/>' % p["line"])
-    o.append(text(108, 618, "Sauvegardes — chiffrées, copiées hors site", 12.5, "text", "600", SANS, p=p))
-    o.append(text(108, 636, "et rejouées : la restauration est testée dans un bac à sable réseau "
-                            "isolé, temps de reprise mesuré", 11.2, "muted", "400", SANS, p=p))
-    o.append(text(28, 678, "Aucun flux inter-VLAN par défaut. Chaque ouverture est nommée, "
-                           "justifiée, et se retrouve dans les journaux.", 10.8, "muted", "400", SANS, p=p))
-
-    o.append('<g transform="translate(902 660)" opacity="0.85">'
-             '<path d="M11 0 C4.9 0 0 4.9 0 11 L0 24 L3.7 20.6 L7.3 24 L11 20.6 L14.7 24 '
-             'L18.3 20.6 L22 24 L22 11 C22 4.9 17.1 0 11 0 Z" fill="%s"/>'
-             '<circle cx="7.2" cy="10.4" r="1.9" fill="%s"/>'
-             '<circle cx="14.8" cy="10.4" r="1.9" fill="%s"/></g>'
-             % (p["accent"], p["bg"], p["bg"]))
-
-    o.append('</svg>')
-    return "\n".join(o) + "\n"
-
-
-# ===========================================================================
-#  3. Specter — une seule variante : le vert de marque tient sur les deux fonds
+#  2. Specter — une seule variante : le vert de marque tient sur les deux fonds
 # ===========================================================================
 
 def build_specter():
@@ -272,7 +159,7 @@ def main():
         os.makedirs(out)
     written = []
     for theme in ("dark", "light"):
-        for name, fn in (("terminal", build_terminal), ("segmentation", build_segmentation)):
+        for name, fn in (("terminal", build_terminal),):
             path = os.path.join(out, "%s-%s.svg" % (name, theme))
             with io.open(path, "w", encoding="utf-8") as f:
                 f.write(fn(theme))

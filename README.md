@@ -36,15 +36,16 @@
 **Antoine P.** — ingénieur cybersécurité, sécurité opérationnelle<br>
 détection et réponse · durcissement d'infrastructure · sécurité cloud
 
-<sub>Trois commandes de cette page n'existent pas : <code>goafetch</code>, <code>goalert</code> et <code>goanet</code> sont une mise en scène.<br>Les sorties, elles, décrivent une infrastructure qui tourne.</sub>
+<sub>Une seule commande de cette page n'existe pas : <code>goafetch</code> est une mise en scène.<br>Les sorties, elles, décrivent une infrastructure qui tourne.</sub>
 
 </div>
 
 <br>
 
 Je conçois et j'opère la détection : instrumenter les hôtes, écrire les règles, faire baisser le
-bruit, puis instruire les alertes jusqu'au post-mortem. Le reste du temps je durcis ce qui doit
-l'être — réseau, identités, cloud — et j'écris les outils qui manquent, sous
+bruit, puis instruire les alertes jusqu'au post-mortem. Côté **DevSecOps**, je durcis ce qui livre
+le code autant que ce qui le fait tourner — chaîne d'intégration, dépendances, secrets, images,
+réseau et identités. Et j'écris les outils qui manquent, sous
 **[GoaCloud](https://goacloud.fr)** : de l'infrastructure et de la sécurité que l'on héberge chez
 soi, en open source, sans télémétrie.
 
@@ -59,6 +60,7 @@ soi, en open source, sans télémétrie.
 |  \_/  |   Détecter ... Wazuh, règles maison, Suricata, MITRE ATT&CK
 \_/\_/\_/   Répondre ... confiner, éradiquer, écrire le post-mortem
             Durcir ..... segmentation, moindre privilège, SSO OIDC, TLS
+            Livrer ..... CI/CD, SAST et SCA, secrets, images durcies
             Cloud ...... GCP : IAM, journalisation, posture, Zero Trust
             Écrire ..... Go · Python · Bash · Swift
             Projet ..... GoaCore — console unifiée pour Proxmox
@@ -68,83 +70,12 @@ soi, en open source, sans télémétrie.
 
 <br>
 
-## `goalert trace --last` — le chemin d'une alerte
-
-Le plus intéressant n'est pas la détection, c'est ce qui se passe dans les minutes qui suivent.
-
-```
-un flux inter-VLAN qui n'a rien à faire là
-  │
-  ▼
-Suricata, en coupure ........ signature levée, écrite dans eve.json
-  │
-  ▼
-Wazuh ....................... décodage, corrélation, règles maison
-                              rattachement à MITRE ATT&CK
-  │  niveau ≥ 10 : ça sort du bruit de fond
-  ▼
-GoaCore · SOAR .............. contexte machine, résumé, action proposée
-  │
-  ├─ blocage à la source .... l'alias OPNsense, mis à jour par l'API
-  └─ fiche d'alerte ......... la décision, elle, reste humaine
-```
-
-Entre l'IDS et la fiche d'alerte, l'essentiel du travail est du débruitage : sans règles de
-corrélation écrites à la main, un IDS ne produit pas de la détection, il produit du volume. Le
-dernier maillon est celui que j'écris — le SOAR rassemble le contexte, il ne décide pas.
-
-<br>
-
-## `goanet topo` — le banc d'essai
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/segmentation-dark.svg">
-  <img src="assets/segmentation-light.svg" width="100%" alt="Schéma de la segmentation du banc d'essai : Internet et l'accès distant Cloudflare Zero Trust convergent vers un pare-feu OPNsense avec Suricata en coupure, qui dessert six VLAN isolés — DMZ, services, sécurité, management, formation et laboratoire cloisonné — puis des sauvegardes chiffrées, sorties hors site et rejouées dans un bac à sable réseau isolé.">
-</picture>
-
-<details>
-<summary><b>Le même plan, en texte</b></summary>
-
-```
-   Internet (WAN)              Cloudflare Zero Trust
-         │                              │
-         └──────────────┬───────────────┘
-                        ▼
-  ┌────────────────────────────────────────────────────────────┐
-  │  OPNsense · blocage par défaut · Suricata en coupure       │
-  └───────────────────────┬────────────────────────────────────┘
-                          │
-  ┌───────────────────────┘
-  │
-  ├─ VLAN 10  DMZ ............ exposé, sans retour vers le LAN
-  ├─ VLAN 20  Services ....... Traefik en TLS wildcard, Docker, GoaCore
-  ├─ VLAN 30  Sécurité ....... SIEM Wazuh, outils offensifs
-  ├─ VLAN 40  Management ..... hyperviseur Proxmox, sauvegardes
-  ├─ VLAN 50  Formation ...... machines montées puis détruites
-  ├─ VLAN 60  Laboratoire .... test cloisonné, sans route sortante
-  │
-  └─ sauvegardes ............. chiffrées, hors site, rejouées
-                               pour de vrai, en bac à sable jetable
-```
-
-</details>
-
-Ce n'est pas une maquette : c'est un homelab Proxmox réellement segmenté, sur lequel tourne tout
-ce que je publie. Les mauvaises surprises se paient ici, pas chez les gens qui installent l'outil.
-Trois choses qu'il m'a apprises :
-
-- Une sauvegarde qu'on n'a jamais restaurée n'est pas une sauvegarde, c'est un fichier.
-- La segmentation ne coûte presque rien le jour où on la pose, et très cher le jour où on veut l'ajouter.
-- Un outil qui appelle discrètement l'extérieur finit toujours par le faire au mauvais moment.
-
-<br>
-
 ## `systemctl status goacore` — ce que je construis
 
 ```
 ● goacore.service - console unifiée pour une infrastructure Proxmox
      Loaded: loaded (GoaCloud/GoaCore; enabled; licence AGPL-3.0)
-     Active: active (running) — sur le banc d'essai décrit plus haut
+     Active: active (running) — en continu sur mon infrastructure
      Status: "aucun appel sortant, aucun plan de contrôle distant"
        Docs: https://goacloud.fr
      CGroup: /goacloud.slice/goacore.service
@@ -155,7 +86,7 @@ Trois choses qu'il m'a apprises :
 ```
 
 En service chez moi, en chantier pour vous : **[GoaCore](https://github.com/GoaCloud/GoaCore)**
-administre l'infrastructure décrite plus haut, et son interface comme ses formats bougent encore
+administre au quotidien un homelab Proxmox segmenté, et son interface comme ses formats bougent
 — c'est écrit avant, pas après. Sa partie la moins spectaculaire est celle à laquelle je tiens le
 plus : une sauvegarde n'y est pas déclarée bonne parce qu'un fichier existe, elle est restaurée
 dans un bac à sable jetable et coupé du réseau, et le temps de reprise est mesuré.
